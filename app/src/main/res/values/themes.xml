@@ -1,10 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.MyStore" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-    </style>
-
-    <style name="Theme.MyStore.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="Theme.MyStore" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor" >@color/black</item>
     </style>
 </resources>

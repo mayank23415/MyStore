@@ -1,10 +1,11 @@
-package com.mystore
+package com.mystore.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
+import com.mystore.R
 
 @Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {

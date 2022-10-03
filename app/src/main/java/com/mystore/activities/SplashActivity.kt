@@ -28,6 +28,8 @@ class SplashActivity : AppCompatActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.activity_splash)
 
+
+
         Handler().postDelayed({
             startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
             finish()

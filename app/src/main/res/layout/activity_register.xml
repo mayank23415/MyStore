@@ -7,56 +7,54 @@
     tools:context=".activities.RegisterActivity">
 
 
-
-    <FrameLayout
-        android:id="@+id/fl_header_image"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/auth_header_image_height"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/content_description"
-            android:scaleType="fitXY"
-            android:src="@drawable/auth_screens_background" />
-
-
-        <com.mystore.utils.MSTextViewBold
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:layout_gravity="center"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/splash_title_text_size"
-            android:scaleType="fitCenter" />
-
-    </FrameLayout>
-
-    <com.mystore.utils.MSTextViewBold
-        android:id="@+id/tv_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="@string/create_an_account"
-        android:textColor="@color/colorPrimaryText"
-        android:textSize="@dimen/title_textSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fl_header_image" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_register">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@+id/fl_header_image"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/auth_header_image_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/auth_screens_background" />
+
+
+                <com.mystore.utils.MSTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/splash_title_text_size"
+                    android:scaleType="fitCenter" />
+
+            </FrameLayout>
+
+            <com.mystore.utils.MSTextViewBold
+                android:id="@+id/tv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="@string/create_an_account"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/title_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fl_header_image" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_first_name"
@@ -70,7 +68,7 @@
                 android:textColorHint="@color/colorSecondaryText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/tv_register">
 
                 <com.mystore.utils.MSEditText
                     android:id="@+id/et_first_name"
@@ -229,9 +227,11 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
                 android:layout_marginTop="25dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_register">
